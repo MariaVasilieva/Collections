@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.NoSuchElementException;
+
 public class LinkedList <T>{
     private Node<T> head;
     private int size;
@@ -47,6 +49,31 @@ public class LinkedList <T>{
         newNode.next = current.next;
         current.next = newNode;
         size++;
+    }
+    public T removeFirst(){
+        if(head == null){
+            throw new NoSuchElementException();
+        }
+        T value = head.data;
+        head = head.next;
+        size--;
+        return value;
+    }
+    public T removeAt(int index){
+        if(index < 0 || index >= size){
+            throw new IndexOutOfBoundsException();
+        }
+        if(index == 0){
+            return removeFirst();
+        }
+        Node<T> current = head;
+        for(int i = 0; i < index-1; i++){
+            current = current.next;
+        }
+        T value = current.data;
+        current.next = current.next.next;
+        size--;
+        return value;
     }
     public String toString(){
         Node<T> current = head;
