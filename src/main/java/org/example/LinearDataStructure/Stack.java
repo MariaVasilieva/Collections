@@ -1,4 +1,4 @@
-package org.example;
+package org.example.LinearDataStructure;
 
 public class Stack <T>{
     private T[] stack;

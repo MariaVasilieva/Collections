@@ -1,4 +1,4 @@
-package org.example.HashTable;
+package org.example.ChainedHashTable;
 
 public class Node<K,V> {
     Entity<K,V> entity;

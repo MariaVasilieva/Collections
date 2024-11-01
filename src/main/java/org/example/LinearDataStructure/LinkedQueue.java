@@ -1,4 +1,4 @@
-package org.example;
+package org.example.LinearDataStructure;
 
 public class LinkedQueue <T>{
     class Node <T>{

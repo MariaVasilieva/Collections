@@ -1,4 +1,4 @@
-package org.example.HashTable;
+package org.example.ChainedHashTable;
 
 public class HashTable <K,V>{
     private Node<K,V>[] table;
