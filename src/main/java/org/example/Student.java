@@ -1,19 +1,17 @@
 package org.example;
 
-public class Student {
-    private int id;
+public class Student implements Cloneable {
     private String name;
     private int age;
-    public Student(int id, String name, int age) {
-        this.id = id;
+    public Student(String name, int age) {
         this.name = name;
         this.age = age;
     }
-    public int getId() {
-        return id;
+    public Student clone() {
+        return new Student(name, age);
     }
-    @Override
-    public String toString() {
-        return id + " " + name + " " + age;
+
+    public void setAge(int age) {
+        this.age = age;
     }
 }
