@@ -1,4 +1,4 @@
-package org.example;
+package org.example.LinearDataStructure;
 
 public class Node <T>{
     T data;
